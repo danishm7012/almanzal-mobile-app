@@ -105,8 +105,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '5',
+      attachBath:'5',
+      giraaj:'3',
+
     },
     {
       id:'9',
@@ -117,8 +119,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '7',
+      attachBath:'7',
+    giraaj:'3',
+
     },
     {
       id:'10',
@@ -129,8 +133,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '3',
+      attachBath:'3',
+    giraaj:'3',
+
     },
     {
       id:'11',
@@ -141,8 +147,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '2',
+      attachBath:'2',
+    giraaj:'3',
+
     },
     {
       id:'12',
@@ -153,8 +161,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '5',
+      attachBath:'5',
+    giraaj:'3',
+
     },
     {
       id:'13',
@@ -165,8 +175,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '4',
+      attachBath:'4',
+    giraaj:'3',
+
     },
     {
       id:'14',
@@ -177,8 +189,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '3',
+      attachBath:'3',
+    giraaj:'3',
+
     },
     {
       id:'15',
@@ -189,8 +203,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '2',
+      attachBath:'2',
+    giraaj:'3',
+
     },
     {
       id:'16',
@@ -201,8 +217,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '5',
+      attachBath:'5',
+    giraaj:'3',
+
     },
     {
       id:'17',
@@ -213,8 +231,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '2',
+      attachBath:'2',
+    giraaj:'3',
+
     },
     {
       id:'18',
@@ -225,8 +245,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '7',
+      attachBath:'7',
+    giraaj:'3',
+
     },
     {
       id:'19',
@@ -237,8 +259,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '8',
+      attachBath:'8',
+    giraaj:'3',
+
     },
     {
       id:'20',
@@ -249,8 +273,10 @@ const PropertyForRent = [
       status:'For Rent',
       area:'1200 m²',
       type:'Appartment',
-      bedroom: '',
-      attachBath:''
+      bedroom: '4',
+      attachBath:'4',
+    giraaj:'3',
+
     },
 
   ];

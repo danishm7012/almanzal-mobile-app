@@ -53,12 +53,18 @@ const PropertiesCategory = props =>{
          {/* <View style={AllStyle.seperator} /> */}
 
          {selectedIndex === 0 &&
-        <PropertiesBuyList />
+        <PropertiesBuyList 
+        onSelect={()=>{
+          props.navigation.navigate({routeName: 'Property_Detail_Sale'})}}
+          />
        
          }
 
         {selectedIndex === 1 &&
-        <PropertiesRentList  />
+        <PropertiesRentList  
+        onSelect={()=>{
+          props.navigation.navigate({routeName: 'Property_Detail_Rent'})}}
+          />
           }
 
           
@@ -66,8 +72,10 @@ const PropertiesCategory = props =>{
          <View style={AllStyle.seperator} />
         </View>
           <View style={{flex:1.3}}>
-          <PropertyForSale/>
- 
+          <PropertyForSale
+                      onSelect={()=>{
+                        props.navigation.navigate({routeName: 'Property_Detail_Sale'})}}
+           />
           </View>
    <View style={{flex:1.3}}>
           <PropertyForRents

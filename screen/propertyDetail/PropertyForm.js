@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { StyleSheet,Image,TextInput,TouchableOpacity,Dimensions,Button,ScrollView, Text, View } from 'react-native';
 import Color from '../../constants/Colors'
 import { Avatar,  Card, Title, Paragraph } from 'react-native-paper';
+import {HeaderButtons, Item} from 'react-navigation-header-buttons'
+import HeaderButton from '../../component/headerbutton/HeaderButton'
 
 let {width:screenWidth, height:screenHeight} = Dimensions.get('window')
 
@@ -43,7 +45,7 @@ alignItems:'center',
     <View style={styles.inputView}>
     <TextInput
       style={styles.TextInput}
-      placeholder="Packege Title..."
+      placeholder="Property Title..."
       placeholderTextColor="#003f5c"
       onChangeText={(nam) => setPackege(nam)}
     />
@@ -52,7 +54,7 @@ alignItems:'center',
   <View style={styles.inputView}>
     <TextInput
       style={styles.TextInput}
-      placeholder="Cost..."
+      placeholder="Rate..."
       placeholderTextColor="#003f5c"
       secureTextEntry={true}
       onChangeText={(cos) => setCost(cos)}
@@ -61,7 +63,7 @@ alignItems:'center',
 
 
   <TouchableOpacity  style={[{marginBottom:screenHeight/7},styles.loginBtn]}>
-  <Text style={styles.loginText}>Add Packege</Text>
+  <Text style={styles.loginText}>Add Property</Text>
 </TouchableOpacity>
 
 </View>
@@ -71,15 +73,27 @@ alignItems:'center',
  );
 }
 
-
-PropertyForm.navigationOptions = navData => {
-  
+PropertyForm.navigationOptions = navigationData => {
     return{
+        headerTitle: (
+            <Image source={require('../../assets/realestatelogo.png')}/>
+        ), 
+
+      headerLeft: () => (
+        <HeaderButtons HeaderButtonComponent = {HeaderButton}>
+          <Item 
+          title='Back Button' 
+          iconName='arrow-back' 
+          onPress={() => {
+            navigationData.navigation.goBack();
+          }} /> 
+      
+        </HeaderButtons>
+      )
+    };
   
-    headerTitle:'Add Property',
-    
-    }
-  }
+  };
+
 
 export default PropertyForm
 const styles = StyleSheet.create({
@@ -117,7 +131,7 @@ loginBtn:{
    backgroundColor:Color.accentColour,
  },
  loginText:{
-color:'#fff',
+color:'#121212',
 fontFamily:'open-sans-bold',
  },
   });

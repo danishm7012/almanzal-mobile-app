@@ -10,6 +10,7 @@ import SignUp from '../../../screen/loginSignup/SignUp'
 import PropertiesTopTabStackNavigation from '../../topnavigation/PropertiesTopTabNavigation'
 import PropertyDetailRent from '../../../screen/propertyDetail/PropertyDetail';
 import PropertyForm from '../../../screen/propertyDetail/PropertyForm';
+import PropertyDetailSale from '../../../screen/propertyDetail/PropertyDetailSale';
 
 const PropertiesStackNavigator = createStackNavigator({
   Propert_ies:{
@@ -23,6 +24,9 @@ const PropertiesStackNavigator = createStackNavigator({
   },
   Property_Detail_Rent:{
     screen:PropertyDetailRent,
+  },
+  Property_Detail_Sale:{
+    screen:PropertyDetailSale
   },
   Property_Form:{
     screen:PropertyForm
