@@ -11,22 +11,10 @@ import {
 } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
-import axios from 'react-native-axios'
 import AllStyle from '../../AllStyle'
 import SocialMediaIcon from '../../component/socialmediaIcon/SocialMediaIcon'
 
-const ContactUs = (props) => {
-  const [value, setValue] = useState(0)
-
-  const [socialLinks, setSocialLinks] = useState({
-    facebook:
-      'https://www.facebook.com/almanzaluae',
-    instagram: 'https://www.instagram.com/almanzal1/',
-    twitter: 'https://twitter.com/ManzalAl',
-    linkedIn: 'https://www.linkedin.com/in/al-manzal-aa548a20a/',
-    website: 'https://almanzal.ae/',
-  })
-
+const ContactUs = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
@@ -37,7 +25,7 @@ const ContactUs = (props) => {
   const submitHandler = async () => {
     try {
       const response = await fetch(
-        'http://chiltern.herokuapp.com/api/contact/add',
+        'http://chiltern.herokuapp.com/api/contact/almanzal',
         {
           method: 'POST',
           mode: 'cors',
@@ -50,7 +38,7 @@ const ContactUs = (props) => {
       const resData = await response.json()
       if (resData) {
         console.log('submit succefully!')
-        alert(resData)
+        alert('submit succefully!')
       }
     } catch (err) {
       setErrors(err)
@@ -116,17 +104,6 @@ const ContactUs = (props) => {
                   value={message}
                 />
               </View>
-
-              {/* <Slider
-          step={1}
-          minimumValue={0}
-          maximumValue={100}
-          value={value}
-          onValueChange={slideValue => setValue(slideValue)}
-          minimumTrackTintColor="#1fb28a"
-          maximumTrackTintColor="#d3d3d3"
-          thumbTintColor="#b9e4c9"
-        /> */}
             </View>
             <View style={{ paddingTop: StatusBar.currentHeight }}>
               <Button title='Submit' color='#0f385a' onPress={submitHandler} />
@@ -140,13 +117,11 @@ const ContactUs = (props) => {
               }}
             >
               <SocialMediaIcon
-                //  style={AllStyles.logo}
-                //  style={{position:'absolute'}}
-                facebookSocial={socialLinks.facebook}
-                twitterSocial={socialLinks.twitter}
-                linkedInSocial={socialLinks.linkedIn}
-                instagramSocial={socialLinks.instagram}
-                websiteSocial={socialLinks.website}
+                facebookSocial='https://www.facebook.com/almanzaluae'
+                twitterSocial='https://twitter.com/ManzalAl'
+                linkedInSocial='https://www.linkedin.com/in/al-manzal-aa548a20a/'
+                instagramSocial='https://www.instagram.com/almanzal1/'
+                websiteSocial='https://almanzal.ae/'
               />
             </View>
           </ScrollView>
