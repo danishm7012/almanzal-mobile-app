@@ -8,14 +8,15 @@ export default StyleSheet.create({
         //************************************Contact Us Page Start  ******************************/
 
 mainContactForm:{
-    flex:1,
-    padding:30,
+    flex:0.7,
+  //  padding:10,
+  paddingHorizontal:30,
   
   },
   contactUsImagesView:{
-    flex:1,
+    flex:0.3,
     width:screenWidth,
-    height:screenHeight/3,
+    //height:screenHeight/4,
   },
   contactUsImages:{
     flex:1,
@@ -24,7 +25,7 @@ mainContactForm:{
     backgroundColor:'#121212',
   },
   contactUsformMainHeading:{
-    flex:1,
+    flex:0.2,
     justifyContent:'center',
     alignItems:'center',
   },
@@ -45,7 +46,7 @@ mainContactForm:{
   
   },
   TextinputfieldcontactUs:{
-    paddingTop:10,
+    paddingTop:15,
     borderBottomColor: '#0f385a',
     borderBottomWidth:2,
     color:'#0f385a',

@@ -18,7 +18,7 @@ return (
   >
     <Card.Cover style={{resizeMode:'stretch'}} source={images} />
      <Card.Content >
-         <View style={{ flexDirection:'row' ,alignItems:'center',justifyContent:'space-between'}}>
+         <View style={{  flexDirection:'row' ,alignItems:'flex-start',justifyContent:'space-between'}}>
       <Title>{title}</Title>
   
       </View>
@@ -26,20 +26,27 @@ return (
     <Card.Content >
      
     <View style={{flexDirection:'row',justifyContent:'flex-start', alignItems:'flex-start'}}>
+    { address && (
     <Ionicons name = 'location' size={18} color={Color.primaryColour} style={{}}/>
-     
-     <Paragraph style={{textAlign:'center'}}>{address}</Paragraph>
-          </View>
+    )   }      
+     <Paragraph numberOfLines={1} ellipsizeMode='tail' style={{}}>{address}</Paragraph>
+      </View>
          <View style={{ flexDirection:'row' ,alignItems:'center',justifyContent:'space-between'}}>
       {/* <Ratting/> */}
     
       <View style={{flexDirection:'row'}}>
+      { price && (
     <Ionicons name = 'flash' size={24} color={Color.primaryColour} style={{}}/>
-     <Paragraph style={{}}>{price}</Paragraph>
+      )}
+    <Paragraph style={{}}>{price}</Paragraph>
           </View>
           <View style={{flexDirection:'row'}}>
-    <Ionicons name = 'bed' size={24} color={Color.primaryColour} style={{marginLeft:20}}/>
-     <Paragraph style={{}}>   {bed}    </Paragraph>
+          { bed && (
+    <Ionicons name = 'bed' size={24} color={Color.primaryColour} style={{}}/>
+          )}
+     <Paragraph style={{}}>{bed} </Paragraph>
+     { bath && (
+    
      <Icon
   
   name='bathtub'
@@ -48,7 +55,9 @@ return (
   color='#121212'
   style={{marginLeft:5}}
    />
-  <Paragraph style={{}}>   {bath}    </Paragraph>
+     )}
+  <Paragraph numberOfLines={1} style={{}}> {bath} </Paragraph>
+  { giraaj && (
 
   <Icon
   
@@ -58,24 +67,26 @@ return (
   size={24}
   style={{marginLeft:5}}
    />
-  <Paragraph style={{}}>   {giraaj}  </Paragraph>
-
+  )}
+   <Paragraph style={{}}> {giraaj}</Paragraph>
+   
+   { area && (
   <Icon
-  
   name='square-foot'
   type='material'
   color='#121212'
   size={28}
-  style={{marginLeft:5}}
+  style={{}}
    />
-  <Paragraph style={{}}> {area}</Paragraph>
+   )}
+   <Paragraph ellipsizeMode='tail' style={{}}>{area}</Paragraph>
           </View>
       </View>
     </Card.Content>
     <Card.Actions style={{alignItems:'flex-end',justifyContent:'space-between'}}>
   <Paragraph style={{color:'#e00000'}}> {status}</Paragraph>
     
-    <Button  mode="contained" style={{backgroundColor:'#e00000'}} onPress={onSelect}>Detail</Button>
+    <Button  mode="contained" style={{backgroundColor:'#e00000'}} onPress={onSelect}>Inquiry Now</Button>
       
     </Card.Actions>
   </Card>

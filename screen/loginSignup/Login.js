@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet,Image,SafeAreaView,ScrollView,Dimensions, TextInput,TouchableOpacity,Button, Text, View } from 'react-native';
 import Color from '../../constants/Colors'
+import {HeaderButtons, Item} from 'react-navigation-header-buttons'
+import HeaderButton from '../../component/headerbutton/HeaderButton'
+
 let {width:screenWidth, height:screenHeight} = Dimensions.get('window')
 
  function Login(navData) {
@@ -75,6 +78,17 @@ Login.navigationOptions = navData => {
     headerTitle: (
       <Image source={require('../../assets/realestatelogo.png')}/>
   ),
+  headerLeft: () => (
+    <HeaderButtons HeaderButtonComponent = {HeaderButton}>
+      <Item 
+      title='Back Button' 
+      iconName='arrow-back' 
+      onPress={() => {
+        navData.navigation.goBack();
+      }} /> 
+  
+    </HeaderButtons>
+  )
     }
   }
 

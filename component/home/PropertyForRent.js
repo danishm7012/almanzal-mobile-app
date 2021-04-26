@@ -9,7 +9,7 @@ function PropertyForRents({onSelect}) {
     return (
         
         <View style={{flex:1,elevation:50}}>
-            <Card containerStyle={{}}>
+            <Card >
                 <View style={{flex:1,marginBottom:20}}>
             <Text style={{fontWeight:'900', fontSize:20,color:'#121212'}}>Property For Rent</Text>
             </View>

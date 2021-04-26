@@ -6,8 +6,10 @@ import {
   Button,
   StatusBar,
   Text,
+  Platform,
   ScrollView,
   SafeAreaView,
+  KeyboardAvoidingView,
 } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
@@ -47,6 +49,10 @@ const ContactUs = () => {
   }
 
   return (
+    <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : "height"}
+    style={{flex:1}}
+  >
     <View style={{ flex: 1 }}>
       <View style={AllStyle.contactUsImagesView}>
         <Image
@@ -62,8 +68,7 @@ const ContactUs = () => {
             <Text style={AllStyle.contactUsformMainHeadingInner}> Us</Text>{' '}
           </Text>
         </View>
-        <SafeAreaView style={{ paddingTop: StatusBar.currentHeight }}>
-          <ScrollView style={{}}>
+       
             <View style={{ flex: 1 }}>
               <View style={{ flex: 1 }}>
                 <TextInput
@@ -99,15 +104,13 @@ const ContactUs = () => {
                   placeholder='Leave your Message Here !'
                   placeholderTextColor='#0f385a'
                   multiline={true}
-                  numberOfLines={4}
+                  numberOfLines={2}
                   onChangeText={(usermessage) => setMessage(usermessage)}
                   value={message}
                 />
               </View>
             </View>
-            <View style={{ paddingTop: StatusBar.currentHeight }}>
-              <Button title='Submit' color='#0f385a' onPress={submitHandler} />
-            </View>
+              <Button style={{paddingTop:StatusBar.currentHeight}} title='Submit' color='#0f385a' onPress={submitHandler} />
 
             <View
               style={{
@@ -124,10 +127,10 @@ const ContactUs = () => {
                 websiteSocial='https://almanzal.ae/'
               />
             </View>
-          </ScrollView>
-        </SafeAreaView>
+
       </View>
     </View>
+    </KeyboardAvoidingView>
   )
 }
 

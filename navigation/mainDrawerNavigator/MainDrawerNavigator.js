@@ -12,6 +12,9 @@ import FAQStackNavigation from '../stackNavigator/FAQStackNavigation';
 import { ScrollView } from 'react-native-gesture-handler'
 import PropertiesCategoryStackNavigation from '../stackNavigator/propertyStack/PropertiesCategoryStackNavigation';
 import PropertiesTopTabStackNavigation from '../topnavigation/PropertiesTopTabNavigation'
+import DubaiProjectStackNavigation from '../stackNavigator/DubaiProjectStack';
+import TurkeyProjectStackNavigation from '../stackNavigator/TurkeyProjectStack';
+import PakistanProjectStackNavigation from '../stackNavigator/PakistanProjectStackNavigator';
 
 const MainDrawerNavigator = createDrawerNavigator({
    
@@ -27,7 +30,37 @@ const MainDrawerNavigator = createDrawerNavigator({
       }
     
     },
-  
+    Dubai_Pro:{
+      screen:DubaiProjectStackNavigation,
+      navigationOptions:{
+        
+        drawerIcon: () => (
+          <Ionicons name = 'flag-outline'size={29} color={Color.title}/>
+        ),
+        drawerLabel:'Dubai Project',
+      }
+    },
+    Turkey_Pro:{
+      screen:TurkeyProjectStackNavigation,
+      navigationOptions:{
+        
+        drawerIcon: () => (
+          <Ionicons name = 'flag-sharp'size={29} color={Color.title}/>
+        ),
+        drawerLabel:'Turkey Project',
+      }
+    },
+    Pakistan_Pro:{
+      screen:PakistanProjectStackNavigation,
+      navigationOptions:{
+        
+        drawerIcon: () => (
+          <Ionicons name = 'flag'size={29} color={Color.title}/>
+        ),
+        drawerLabel:'Pakistan Project',
+      }
+    },
+    
     About:{
       screen:AboutStackNavigation,
       navigationOptions:{

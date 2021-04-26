@@ -1,10 +1,10 @@
 import React from 'react'
-import { Image,Dimensions,ScrollView, View,Text } from 'react-native'
+import { Image,Dimensions,ScrollView, View,Text , TouchableOpacity } from 'react-native'
 import {Card} from 'react-native-elements'
 import NewProjectsData from '../../data/NewProjectsData'
 let {width:screenWidth, height:screenHeight} = Dimensions.get('window')
 
-function NewProjects() {
+function NewProjects({onSelectDubai,onSelectTurkey,onSelectPak}) {
     return (
         
         <View style={{flex:1,elevation:50}}>
@@ -17,17 +17,47 @@ function NewProjects() {
             showsHorizontalScrollIndicator={false}
             pagingEnabled={true}
             >
-            {NewProjectsData.map((element) => {
-                return(
-                    <View key={element.id} style={{flex:1,marginLeft:10}}>
-                    <Image style={{resizeMode:'stretch',height:screenHeight/6,width:screenWidth/1.5}} source= {element.img}/>
-                    <Text>{element.name}</Text>
-                    <Text>{element.price}</Text>
-                    <Text style={{color:'#e00000'}}>{element.status}</Text>
-                    
+            {/* key={element.id} {NewProjectsData.map((element) => {
+                return( */}
+                <TouchableOpacity
+                activeOpacity={0.3}
+                 style={{flex:1, marginLeft:10}}
+                 onPress={onSelectPak}>
+                    <View  style={{flex:1}}>
+                    <Image style={{resizeMode:'stretch',height:screenHeight/6,width:screenWidth/1.5}} source= {require('../../assets/projectImages/pakistan.jpg')}/>
+                    <Text>Pakistan</Text>
+                    <Text>Invest For Future</Text>
+                    <Text style={{color:'#e00000'}}>Developed</Text>
                     </View>
-                )
-            })}
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                    activeOpacity={0.3}
+                    style={{flex:1, marginLeft:10}}
+                    onPress={onSelectTurkey}>
+                    <View  style={{flex:1}}>
+
+                    <Image style={{resizeMode:'stretch',height:screenHeight/6,width:screenWidth/1.5}} source= {require('../../assets/projectImages/turkey.jpg')}/>
+                    <Text>Turkey</Text>
+                    <Text>Invest For Future</Text>
+                    <Text style={{color:'#e00000'}}>Developed</Text>
+                    </View>           
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                    activeOpacity={0.3}
+                    style={{flex:1, marginLeft:10}}
+                    onPress={onSelectDubai}>         
+                    <View  style={{flex:1}}>
+
+                    <Image style={{resizeMode:'stretch',height:screenHeight/6,width:screenWidth/1.5}} source= {require('../../assets/projectImages/dubai.jpg')}/>
+                    <Text>Dubai</Text>
+                    <Text>Invest For Future</Text>
+                    <Text style={{color:'#e00000'}}>Developed</Text>
+                    
+
+                    </View>
+                    </TouchableOpacity>
+                {/* )
+            })} */}
 </ScrollView>
             </Card>
         </View>

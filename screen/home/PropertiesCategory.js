@@ -69,14 +69,8 @@ const PropertiesCategory = (props) => {
           props.navigation.navigate({routeName: 'Property_Detail_Rent'})}}
           />
           }
-          {selectedIndex === 0 && <PropertiesBuyList />}
-
-          {selectedIndex === 1 && <PropertiesRentList />}
 
           <View style={AllStyle.seperator} />
-        </View>
-        <View style={{ flex: 1.3 }}>
-          <PropertyForSale />
         </View>
           <View style={{flex:1.3}}>
           <PropertyForSale
@@ -85,7 +79,6 @@ const PropertiesCategory = (props) => {
            />
           </View>
    <View style={{flex:1.3}}>
-        <View style={{ flex: 1.3 }}>
           <PropertyForRents
             onSelect={() => {
               props.navigation.navigate({ routeName: 'Property_Detail_Rent' })
@@ -94,7 +87,16 @@ const PropertiesCategory = (props) => {
         </View>
 
         <View style={{ flex: 1.3 }}>
-          <NewProjects />
+          <NewProjects 
+                      onSelectDubai={() => {
+                        props.navigation.navigate({ routeName: 'Dubai_Project' })
+                      }}
+                      onSelectTurkey={() => {
+                        props.navigation.navigate({ routeName: 'Turkey_Project' })
+                      }}
+                      onSelectPak={() => {
+                        props.navigation.navigate({ routeName: 'Pakistan_Project' })
+                      }}/>
         </View>
       </View>
     </ScrollView>
