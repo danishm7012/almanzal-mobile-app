@@ -2,7 +2,7 @@ const newProjectsCardData = [
     {
       id:'1',
       name:'SAQLAIN MUSHTAQ HEIGHTS',
-      img: require('../assets/propertyImages/appartment/appartment9.jpg'),
+      img: require('../assets/projectImages/pakproimg/mushtaqheight.jpg'),
       price:'$899,000',
       price2:'$7,600/sq ft',
       address:'NEW PROJECTS IN ISLAMABAD',
@@ -16,7 +16,7 @@ const newProjectsCardData = [
     {
         id:'2',
         name:'Choice Apartments',
-        img: require('../assets/propertyImages/appartment/appartment10.jpg'),
+        img: require('../assets/projectImages/pakproimg/choice.jpg'),
         price:'$245,000',
         prive2:'$1,800/sq ft',
         address:'PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -30,7 +30,7 @@ const newProjectsCardData = [
       {
         id:'3',
         name:'New Metro City',
-        img: require('../assets/propertyImages/appartment/appartment11.jpg'),
+        img: require('../assets/projectImages/pakproimg/metrocity.jpg'),
         price:'$450,000',
         price2:'$2,800/sq ft',
         address:'PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -44,7 +44,7 @@ const newProjectsCardData = [
       {
         id:'4',
         name:'Dream Gardens',
-        img: require('../assets/propertyImages/appartment/appartment8.jpg'),
+        img: require('../assets/projectImages/pakproimg/dreamgarden.jpg'),
         price:'$250,000',
         price2:'$2,300/sq ft',
         address:'NEW PROJECTS IN LAHORE, PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -58,7 +58,7 @@ const newProjectsCardData = [
       {
         id:'5',
         name:'Al Fazal Mall',
-        img: require('../assets/propertyImages/appartment/appartment7.jpg'),
+        img: require('../assets/projectImages/pakproimg/fazalmall.jpg'),
         price:'$987,000',
         price2:'$6,350/sq ft',
         address:'APARTMENTS / FLATS, HOMES, NEW PROJECTS IN LAHORE, PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -72,7 +72,7 @@ const newProjectsCardData = [
       {
         id:'6',
         name:'Al Jalil Garden',
-        img: require('../assets/propertyImages/appartment/appartment6.jpg'),
+        img: require('../assets/projectImages/pakproimg/jalilgarden.jpg'),
         price:'$967,000',
         price2:'$9,800/sq ft',
         address:'NEW PROJECTS IN LAHORE, PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -86,7 +86,7 @@ const newProjectsCardData = [
       {
         id:'7',
         name:'Shireen Khaleej Center',
-        img: require('../assets/propertyImages/appartment/appartment5.jpg'),
+        img: require('../assets/projectImages/pakproimg/khaleejcenter.jpg'),
         price:'$876,000',
         price2:'$7,600/sq ft',
         address:'APARTMENTS / FLATS, HOMES, NEW PROJECTS IN GWADAR, PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -100,7 +100,7 @@ const newProjectsCardData = [
       {
         id:'8',
         name:'Lavish Mall Islamabad',
-        img: require('../assets/propertyImages/appartment/appartment4.jpg'),
+        img: require('../assets/projectImages/pakproimg/levishmall.jpg'),
         price:'$456,000',
         price2:'$2,900/sq ft',
         address:'APARTMENTS / FLATS, HOMES, PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -114,7 +114,7 @@ const newProjectsCardData = [
       {
         id:'9',
         name:'Zameen Aurum',
-        img: require('../assets/propertyImages/appartment/appartment3.jpg'),
+        img: require('../assets/projectImages/pakproimg/zameenarum.jpg'),
         price:'$540,000',
         price2:'$3,700/sq ft',
         address:'APARTMENTS / FLATS, HOMES, NEW PROJECTS IN LAHORE, PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -128,7 +128,7 @@ const newProjectsCardData = [
       {
         id:'10',
         name:'DHA RAYA RESORTS',
-        img: require('../assets/propertyImages/appartment/appartment2.jpg'),
+        img: require('../assets/projectImages/pakproimg/rayaResort.jpeg'),
         price:'$890,000',
         price2:'$3,690/sq ft',
         address:'APARTMENTS / FLATS, HOMES, NEW PROJECTS IN LAHORE, PAKISTAN PROPERTY REAL ESTATE PROJECTS',
@@ -142,7 +142,7 @@ const newProjectsCardData = [
       {
         id:'11',
         name:'Bin Qasim City Gwadar',
-        img: require('../assets/propertyImages/appartment/villa1.jpg'),
+        img: require('../assets/projectImages/pakproimg/binQasimGawadar.jpg'),
         price:'$990,000',
         price2:'$6,000/sq ft',
         address:'BUSINESS DEALS, COMMERCIAL, COMMERCIAL PLOTS, DEVELOPMENT, NEW PROJECTS IN GWADAR, PAKISTAN PROPERTY REAL ESTATE PROJECTS, PLOTS, RESIDENTIAL, RESIDENTIAL PLOTS',
@@ -156,7 +156,7 @@ const newProjectsCardData = [
       {
         id:'12',
         name:'SQ 99 Mall',
-        img: require('../assets/propertyImages/appartment/villa2.jpg'),
+        img: require('../assets/projectImages/pakproimg/mallAppart.jpg'),
         price:'$880,000',
         price2:'$6,700/sq ft',
         address:'APARTMENTS / FLATS, HOMES, NEW PROJECTS IN LAHORE, PAKISTAN PROPERTY REAL ESTATE PROJECTS',

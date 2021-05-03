@@ -1,20 +1,21 @@
+import {Button, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
+import {Dimensions, Platform} from "react-native"
+import { DrawerItems, createDrawerNavigator } from 'react-navigation-drawer'
 import React,{useState} from 'react';
-import {StyleSheet,Image,Button, View,Text,TouchableOpacity, SafeAreaView} from 'react-native'
-import { createAppContainer } from "react-navigation";
-import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer'
-import { Ionicons } from '@expo/vector-icons';
-import {Platform,Dimensions } from "react-native"
-import Color from '../../constants/Colors'
+
 import AboutStackNavigation from '../stackNavigator/AboutStackNavigation'
+import Color from '../../constants/Colors'
 import ContactUsStackNavigation from '../stackNavigator/ContactUsStackNavigation';
-import TermandConditionStackNavigation from '../stackNavigator/TermandConditionStackNavigation';
+import DubaiProjectStackNavigation from '../stackNavigator/DubaiProjectStack';
 import FAQStackNavigation from '../stackNavigator/FAQStackNavigation';
-import { ScrollView } from 'react-native-gesture-handler'
+import { Ionicons } from '@expo/vector-icons';
+import PakistanProjectStackNavigation from '../stackNavigator/PakistanProjectStackNavigator';
 import PropertiesCategoryStackNavigation from '../stackNavigator/propertyStack/PropertiesCategoryStackNavigation';
 import PropertiesTopTabStackNavigation from '../topnavigation/PropertiesTopTabNavigation'
-import DubaiProjectStackNavigation from '../stackNavigator/DubaiProjectStack';
+import { ScrollView } from 'react-native-gesture-handler'
+import TermandConditionStackNavigation from '../stackNavigator/TermandConditionStackNavigation';
 import TurkeyProjectStackNavigation from '../stackNavigator/TurkeyProjectStack';
-import PakistanProjectStackNavigation from '../stackNavigator/PakistanProjectStackNavigator';
+import { createAppContainer } from "react-navigation";
 
 const MainDrawerNavigator = createDrawerNavigator({
    
@@ -35,7 +36,8 @@ const MainDrawerNavigator = createDrawerNavigator({
       navigationOptions:{
         
         drawerIcon: () => (
-          <Ionicons name = 'flag-outline'size={29} color={Color.title}/>
+          <Image style={{height:40,width:40,resizeMode:'contain'}} source={require('../../assets/dubaiflag.gif')}/>
+
         ),
         drawerLabel:'Dubai Project',
       }
@@ -45,7 +47,8 @@ const MainDrawerNavigator = createDrawerNavigator({
       navigationOptions:{
         
         drawerIcon: () => (
-          <Ionicons name = 'flag-sharp'size={29} color={Color.title}/>
+          <Image style={{height:40,width:40,resizeMode:'contain'}} source={require('../../assets/turkeyflags.gif')}/>
+
         ),
         drawerLabel:'Turkey Project',
       }
@@ -55,7 +58,7 @@ const MainDrawerNavigator = createDrawerNavigator({
       navigationOptions:{
         
         drawerIcon: () => (
-          <Ionicons name = 'flag'size={29} color={Color.title}/>
+          <Image style={{height:40,width:40,resizeMode:'contain'}} source={require('../../assets/pakistaniflag.gif')}/>
         ),
         drawerLabel:'Pakistan Project',
       }
