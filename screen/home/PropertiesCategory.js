@@ -1,35 +1,23 @@
-import React from 'react'
-import {
-  View,
-  Image,
-  StatusBar,
-  Text,
-  FlatList,
-  TouchableHighlight,
-} from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
-import HeaderButton from '../../component/headerbutton/HeaderButton'
-import SearchBars from '../../component/searchComponent/SearchBar'
+import { Image, Text, View } from 'react-native'
+
 import AllStyle from '../../AllStyle'
-import SegmentedControlTab from 'react-native-segmented-control-tab'
-import { ScrollView } from 'react-native-gesture-handler'
-import PropertiesBuyList from '../../component/home/PropertiesFlatlist'
-import PropertyForSale from '../../component/home/PropertyForSale'
-import PropertyForRents from '../../component/home/PropertyForRent'
+import HeaderButton from '../../component/headerbutton/HeaderButton'
 import NewProjects from '../../component/home/NewProjects'
+import PropertiesBuyList from '../../component/home/PropertiesFlatlist'
 import PropertiesRentList from '../../component/home/PropertyRentList'
+import PropertyForRents from '../../component/home/PropertyForRent'
+import PropertyForSale from '../../component/home/PropertyForSale'
+import React from 'react'
+import { ScrollView } from 'react-native-gesture-handler'
+import SearchBars from '../../component/searchComponent/SearchBar'
+import SegmentedControlTab from 'react-native-segmented-control-tab'
 
 const PropertiesCategory = (props) => {
   const [selectedIndex, setSelectedIndex] = React.useState(0)
-  const [selectedIndexinner, setSelectedIndexinner] = React.useState(0)
 
   const handleSingleIndexSelect = (index) => {
-    // For single Tab Selection SegmentedControlTab
     setSelectedIndex(index)
-  }
-  const handleSingleIndexSelectinner = (index) => {
-    // For single Tab Selection SegmentedControlTab
-    setSelectedIndexinner(index)
   }
 
   return (
@@ -53,32 +41,33 @@ const PropertiesCategory = (props) => {
               marginBottom: 10,
             }}
           />
-          {/* <View style={AllStyle.seperator} /> */}
 
-         {selectedIndex === 0 &&
-        <PropertiesBuyList 
-        onSelect={()=>{
-          props.navigation.navigate({routeName: 'Property_Detail_Sale'})}}
-          />
-       
-         }
+          {selectedIndex === 0 && (
+            <PropertiesBuyList
+              onSelect={() => {
+                props.navigation.navigate({ routeName: 'Property_Detail_Sale' })
+              }}
+            />
+          )}
 
-        {selectedIndex === 1 &&
-        <PropertiesRentList  
-        onSelect={()=>{
-          props.navigation.navigate({routeName: 'Property_Detail_Rent'})}}
-          />
-          }
+          {selectedIndex === 1 && (
+            <PropertiesRentList
+              onSelect={() => {
+                props.navigation.navigate({ routeName: 'Property_Detail_Rent' })
+              }}
+            />
+          )}
 
           <View style={AllStyle.seperator} />
         </View>
-          <View style={{flex:1.3}}>
+        <View style={{ flex: 1.3 }}>
           <PropertyForSale
-                      onSelect={()=>{
-                        props.navigation.navigate({routeName: 'Property_Detail_Sale'})}}
-           />
-          </View>
-   <View style={{flex:1.3}}>
+            onSelect={() => {
+              props.navigation.navigate({ routeName: 'Property_Detail_Sale' })
+            }}
+          />
+        </View>
+        <View style={{ flex: 1.3 }}>
           <PropertyForRents
             onSelect={() => {
               props.navigation.navigate({ routeName: 'Property_Detail_Rent' })
@@ -87,16 +76,17 @@ const PropertiesCategory = (props) => {
         </View>
 
         <View style={{ flex: 1.3 }}>
-          <NewProjects 
-                      onSelectDubai={() => {
-                        props.navigation.navigate({ routeName: 'Dubai_Project' })
-                      }}
-                      onSelectTurkey={() => {
-                        props.navigation.navigate({ routeName: 'Turkey_Project' })
-                      }}
-                      onSelectPak={() => {
-                        props.navigation.navigate({ routeName: 'Pakistan_Project' })
-                      }}/>
+          <NewProjects
+            onSelectDubai={() => {
+              props.navigation.navigate({ routeName: 'Dubai_Project' })
+            }}
+            onSelectTurkey={() => {
+              props.navigation.navigate({ routeName: 'Turkey_Project' })
+            }}
+            onSelectPak={() => {
+              props.navigation.navigate({ routeName: 'Pakistan_Project' })
+            }}
+          />
         </View>
       </View>
     </ScrollView>
@@ -110,8 +100,8 @@ PropertiesCategory.navigationOptions = (navData) => {
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title='Menu'
-          iconName='ios-menu'
+          title="Menu"
+          iconName="ios-menu"
           onPress={() => {
             navData.navigation.toggleDrawer()
           }}
@@ -121,14 +111,9 @@ PropertiesCategory.navigationOptions = (navData) => {
     headerRight: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          iconName='person'
+          iconName="person"
           onPress={() => {
             navData.navigation.navigate('Login_Screen')
-            // Share.share({
-            //   title: 'Paradisegoc App',
-            //   message:  'https://reactnative.dev/docs/share'  + '\nHy! Happy to see you!'
-            // }).then((res) => console.log(res))
-            //   .catch((error) => console.log(error))
           }}
         />
       </HeaderButtons>

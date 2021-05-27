@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
 import {
-  View,
-  Image,
-  TextInput,
   Button,
+  Image,
+  KeyboardAvoidingView,
+  Platform,
   StatusBar,
   Text,
-  Platform,
-  ScrollView,
-  SafeAreaView,
-  KeyboardAvoidingView,
+  TextInput,
+  View,
 } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
-import HeaderButton from '../../component/headerbutton/HeaderButton'
+import React, { useState } from 'react'
+
 import AllStyle from '../../AllStyle'
+import HeaderButton from '../../component/headerbutton/HeaderButton'
 import SocialMediaIcon from '../../component/socialmediaIcon/SocialMediaIcon'
 
 const ContactUs = () => {
@@ -50,86 +49,93 @@ const ContactUs = () => {
 
   return (
     <KeyboardAvoidingView
-    behavior={Platform.OS === "ios" ? "padding" : "height"}
-    style={{flex:1}}
-  >
-    <View style={{ flex: 1 }}>
-      <View style={AllStyle.contactUsImagesView}>
-        <Image
-          source={require('../../assets/contactimgs.png')}
-          style={AllStyle.contactUsImages}
-        />
-      </View>
-      <View style={AllStyle.mainContactForm}>
-        <View style={AllStyle.contactUsformMainHeading}>
-          <Text style={AllStyle.contactUsformMainHeadingOuter}>
-            {' '}
-            Contact{' '}
-            <Text style={AllStyle.contactUsformMainHeadingInner}> Us</Text>{' '}
-          </Text>
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={{ flex: 1 }}
+    >
+      <View style={{ flex: 1 }}>
+        <View style={AllStyle.contactUsImagesView}>
+          <Image
+            source={require('../../assets/contactimgs.png')}
+            style={AllStyle.contactUsImages}
+          />
         </View>
-       
+        <View style={AllStyle.mainContactForm}>
+          <View style={AllStyle.contactUsformMainHeading}>
+            <Text style={AllStyle.contactUsformMainHeadingOuter}>
+              {' '}
+              Contact{' '}
+              <Text style={AllStyle.contactUsformMainHeadingInner}>
+                {' '}
+                Us
+              </Text>{' '}
+            </Text>
+          </View>
+
+          <View style={{ flex: 1 }}>
             <View style={{ flex: 1 }}>
-              <View style={{ flex: 1 }}>
-                <TextInput
-                  style={AllStyle.TextinputfieldcontactUs}
-                  placeholder='Name'
-                  onChangeText={(name) => setName(name)}
-                  value={name}
-                  placeholderTextColor='#0f385a'
-                />
+              <TextInput
+                style={AllStyle.TextinputfieldcontactUs}
+                placeholder="Name"
+                onChangeText={(name) => setName(name)}
+                value={name}
+                placeholderTextColor="#0f385a"
+              />
 
-                {errors.name}
+              {errors.name}
 
-                <TextInput
-                  style={AllStyle.TextinputfieldcontactUs}
-                  placeholder='Email'
-                  placeholderTextColor='#0f385a'
-                  onChangeText={(useremail) => setEmail(useremail)}
-                  value={email}
-                  textContentType='emailAddress'
-                />
-                {errors.email}
-                <TextInput
-                  style={AllStyle.TextinputfieldcontactUs}
-                  placeholder='Subject'
-                  placeholderTextColor='#0f385a'
-                  onChangeText={(subject) => setSubject(subject)}
-                  value={subject}
-                />
-                {errors.subject}
+              <TextInput
+                style={AllStyle.TextinputfieldcontactUs}
+                placeholder="Email"
+                placeholderTextColor="#0f385a"
+                onChangeText={(useremail) => setEmail(useremail)}
+                value={email}
+                textContentType="emailAddress"
+              />
+              {errors.email}
+              <TextInput
+                style={AllStyle.TextinputfieldcontactUs}
+                placeholder="Subject"
+                placeholderTextColor="#0f385a"
+                onChangeText={(subject) => setSubject(subject)}
+                value={subject}
+              />
+              {errors.subject}
 
-                <TextInput
-                  style={AllStyle.TextinputfieldcontactUs}
-                  placeholder='Leave your Message Here !'
-                  placeholderTextColor='#0f385a'
-                  multiline={true}
-                  numberOfLines={2}
-                  onChangeText={(usermessage) => setMessage(usermessage)}
-                  value={message}
-                />
-              </View>
-            </View>
-              <Button style={{paddingTop:StatusBar.currentHeight}} title='Submit' color='#0f385a' onPress={submitHandler} />
-
-            <View
-              style={{
-                paddingTop: StatusBar.currentHeight * 2.5,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <SocialMediaIcon
-                facebookSocial='https://www.facebook.com/almanzaluae'
-                twitterSocial='https://twitter.com/ManzalAl'
-                linkedInSocial='https://www.linkedin.com/in/al-manzal-aa548a20a/'
-                instagramSocial='https://www.instagram.com/almanzal1/'
-                websiteSocial='https://almanzal.ae/'
+              <TextInput
+                style={AllStyle.TextinputfieldcontactUs}
+                placeholder="Leave your Message Here !"
+                placeholderTextColor="#0f385a"
+                multiline={true}
+                numberOfLines={2}
+                onChangeText={(usermessage) => setMessage(usermessage)}
+                value={message}
               />
             </View>
+          </View>
+          <Button
+            style={{ paddingTop: StatusBar.currentHeight }}
+            title="Submit"
+            color="#0f385a"
+            onPress={submitHandler}
+          />
 
+          <View
+            style={{
+              paddingTop: StatusBar.currentHeight * 2.5,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <SocialMediaIcon
+              facebookSocial="https://www.facebook.com/almanzaluae"
+              twitterSocial="https://twitter.com/ManzalAl"
+              linkedInSocial="https://www.linkedin.com/in/al-manzal-aa548a20a/"
+              instagramSocial="https://www.instagram.com/almanzal1/"
+              websiteSocial="https://almanzal.ae/"
+            />
+          </View>
+        </View>
       </View>
-    </View>
     </KeyboardAvoidingView>
   )
 }
@@ -140,8 +146,8 @@ ContactUs.navigationOptions = (navData) => {
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title='Menu'
-          iconName='ios-menu'
+          title="Menu"
+          iconName="ios-menu"
           onPress={() => {
             navData.navigation.toggleDrawer()
           }}
