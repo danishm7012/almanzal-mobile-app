@@ -1,8 +1,12 @@
 {
   "expo": {
-    "name": "real-state",
-    "slug": "real-state",
+    "name": "Al Manzal",
+    "slug": "al-manzal",
+    "description": "Al Manzal is the UAE real estate group of companies introducing new way to search profitable commercial & residential properties in Dubai. Al Manzal Dubai",
+    "privacy": "public",
     "version": "1.0.0",
+    "sdkVersion": "40.0.0",
+    "platforms": ["ios", "android"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -13,15 +17,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
+      "bundleIdentifier": "com.almanzal",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.almanzal",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
