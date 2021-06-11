@@ -1,5 +1,5 @@
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
-import { Image, Text, View } from 'react-native'
+import { Image, LogBox, Text, View } from 'react-native'
 
 import AllStyle from '../../AllStyle'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
@@ -14,6 +14,7 @@ import SearchBars from '../../component/searchComponent/SearchBar'
 import SegmentedControlTab from 'react-native-segmented-control-tab'
 
 const PropertiesCategory = (props) => {
+  LogBox.ignoreLogs(['Your project is accessing'])
   const [selectedIndex, setSelectedIndex] = React.useState(0)
 
   const handleSingleIndexSelect = (index) => {
@@ -100,8 +101,8 @@ PropertiesCategory.navigationOptions = (navData) => {
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Menu"
-          iconName="ios-menu"
+          title='Menu'
+          iconName='ios-menu'
           onPress={() => {
             navData.navigation.toggleDrawer()
           }}
@@ -111,7 +112,7 @@ PropertiesCategory.navigationOptions = (navData) => {
     headerRight: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          iconName="person"
+          iconName='person'
           onPress={() => {
             navData.navigation.navigate('Login_Screen')
           }}

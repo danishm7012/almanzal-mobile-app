@@ -20,9 +20,7 @@ const MainDrawerNavigator = createDrawerNavigator(
     Properties_Category: {
       screen: PropertiesCategoryStackNavigation,
       navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons name="home" size={25} color={Color.title} />
-        ),
+        drawerIcon: () => <Ionicons name='home' size={25} color='#121212' />,
 
         drawerLabel: 'Home',
       },
@@ -68,11 +66,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       screen: AboutStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons
-            name="information-circle-sharp"
-            size={29}
-            color={Color.title}
-          />
+          <Ionicons name='information-circle-sharp' size={29} color='#121212' />
         ),
         drawerLabel: 'AboutUs',
       },
@@ -82,7 +76,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       screen: ContactUsStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name="call-sharp" size={25} color={Color.title} />
+          <Ionicons name='call-sharp' size={25} color='#121212' />
         ),
         drawerLabel: 'ContactUs',
       },
@@ -92,7 +86,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       screen: TermandConditionStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name="reader-sharp" size={25} color={Color.title} />
+          <Ionicons name='reader-sharp' size={25} color='#121212' />
         ),
         drawerLabel: 'Term&Condition',
       },
@@ -102,7 +96,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       screen: FAQStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name="hand-left-sharp" size={25} color={Color.title} />
+          <Ionicons name='hand-left-sharp' size={25} color='#121212' />
         ),
         drawerLabel: 'FAQ',
       },
@@ -139,11 +133,11 @@ const MainDrawerNavigator = createDrawerNavigator(
       )
     },
 
-    drawerBackgroundColor: Color.drawerBack,
+    drawerBackgroundColor: '#fff',
     contentOptions: {
-      activeTintColor: Color.title,
+      activeTintColor: '#121212',
 
-      inactiveTintColor: Color.inactiveTitle,
+      inactiveTintColor: '#636262',
       itemsContainerStyle: {
         marginVertical: 55,
       },
