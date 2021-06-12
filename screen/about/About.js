@@ -65,7 +65,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Bin Qasim City - Gwadar
             </Text>
             <Text
@@ -74,7 +74,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               SQ Mall 99 - Lahore
             </Text>
             <Text
@@ -83,7 +83,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Zameen Aurum - Lahore
             </Text>
             <Text
@@ -92,7 +92,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Dream Gardens - Lahore
             </Text>
             <Text
@@ -101,7 +101,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               DHA Raya - Lahore
             </Text>
             <Text
@@ -110,7 +110,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               New Metro City - Jhelum
             </Text>
             <Text
@@ -119,7 +119,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Lavish Mall - Islamabad
             </Text>
             <Text
@@ -128,7 +128,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Mivida Housing Project - Islamabad
             </Text>
             <Text
@@ -137,7 +137,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Zameen Aurum - Lahore
             </Text>
             <Text
@@ -146,7 +146,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Zameen Aurum - Lahore
             </Text>
             <Text
@@ -155,7 +155,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Zameen Aurum - Lahore
             </Text>
           </View>
@@ -187,7 +187,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Paramount Towers
             </Text>
             <Text
@@ -196,7 +196,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Nashama
             </Text>
             <Text
@@ -205,7 +205,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Habtoor City
             </Text>
             <Text
@@ -214,7 +214,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Sky Courts
             </Text>
             <Text
@@ -223,7 +223,7 @@ const About = (props) => {
                 AllStyle.Aboutdetail,
               ]}
             >
-              <Ionicons name="star-sharp" size={25} color="#e00000" />
+              <Ionicons name='star-sharp' size={25} color='#e00000' />
               Ajman City
             </Text>
           </View>
@@ -311,12 +311,18 @@ const About = (props) => {
 
 About.navigationOptions = (navData) => {
   return {
-    headerTitle: 'About',
+    headerTitle: () => (
+      <Text
+        style={{ fontSize: 16, fontFamily: 'open-sans-bold', color: '#fff' }}
+      >
+        About
+      </Text>
+    ),
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Menu"
-          iconName="ios-menu"
+          title='Menu'
+          iconName='ios-menu'
           onPress={() => {
             navData.navigation.toggleDrawer()
           }}

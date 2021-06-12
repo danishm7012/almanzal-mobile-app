@@ -52,8 +52,8 @@ function PropertyForm(navData) {
             <View style={styles.inputView}>
               <TextInput
                 style={styles.TextInput}
-                placeholder="Property Title..."
-                placeholderTextColor="#003f5c"
+                placeholder='Property Title...'
+                placeholderTextColor='#003f5c'
                 onChangeText={(nam) => setPackege(nam)}
               />
             </View>
@@ -61,8 +61,8 @@ function PropertyForm(navData) {
             <View style={styles.inputView}>
               <TextInput
                 style={styles.TextInput}
-                placeholder="Rate..."
-                placeholderTextColor="#003f5c"
+                placeholder='Rate...'
+                placeholderTextColor='#003f5c'
                 secureTextEntry={true}
                 onChangeText={(cos) => setCost(cos)}
               />
@@ -82,13 +82,15 @@ function PropertyForm(navData) {
 
 PropertyForm.navigationOptions = (navigationData) => {
   return {
-    headerTitle: <Image source={require('../../assets/realestatelogo.png')} />,
+    headerTitle: () => (
+      <Image source={require('../../assets/realestatelogo.png')} />
+    ),
 
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Back Button"
-          iconName="arrow-back"
+          title='Back Button'
+          iconName='arrow-back'
           onPress={() => {
             navigationData.navigation.goBack()
           }}

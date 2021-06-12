@@ -10,7 +10,7 @@ import PropertyForRents from '../../component/home/PropertyForRent'
 import PropertyForSale from '../../component/home/PropertyForSale'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import SearchBars from '../../component/searchComponent/SearchBar'
+/* import SearchBars from '../../component/searchComponent/SearchBar' */
 import SegmentedControlTab from 'react-native-segmented-control-tab'
 
 const PropertiesCategory = (props) => {
@@ -23,10 +23,10 @@ const PropertiesCategory = (props) => {
 
   return (
     <ScrollView>
-      <View style={{ flex: 1 }}>
-        <View style={{ flex: 2, alignSelf: 'stretch' }}>
+      {/*  <View style={{ flex: 2, alignSelf: 'stretch' }}>
           <SearchBars />
-        </View>
+        </View> */}
+      <View style={{ flex: 1 }}>
         <View style={AllStyle.container}>
           {/* Simple Segmented Control*/}
           <Text style={AllStyle.headerText}>Properties For</Text>
@@ -96,7 +96,9 @@ const PropertiesCategory = (props) => {
 
 PropertiesCategory.navigationOptions = (navData) => {
   return {
-    headerTitle: <Image source={require('../../assets/realestatelogo.png')} />,
+    headerTitle: () => (
+      <Image source={require('../../assets/realestatelogo.png')} />
+    ),
 
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
