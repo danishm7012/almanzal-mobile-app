@@ -11,6 +11,7 @@ import { Ionicons } from '@expo/vector-icons'
 import PakistanProjectStackNavigation from '../stackNavigator/PakistanProjectStackNavigator'
 import PropertiesCategoryStackNavigation from '../stackNavigator/propertyStack/PropertiesCategoryStackNavigation'
 import { ScrollView } from 'react-native-gesture-handler'
+import SearchPropertyStackNavigation from '../stackNavigator/SearchPropertyStackNavigation'
 import TermandConditionStackNavigation from '../stackNavigator/TermandConditionStackNavigation'
 import TurkeyProjectStackNavigation from '../stackNavigator/TurkeyProjectStack'
 import { createAppContainer } from 'react-navigation'
@@ -61,7 +62,15 @@ const MainDrawerNavigator = createDrawerNavigator(
         drawerLabel: 'Pakistan Project',
       },
     },
-
+    // SearchProperty: {
+    //   screen: SearchPropertyStackNavigation,
+    //   navigationOptions: {
+    //     drawerIcon: () => (
+    //       <Ionicons name='information-circle-sharp' size={29} color='#121212' />
+    //     ),
+    //     drawerLabel: 'Search Property',
+    //   },
+    // },
     About: {
       screen: AboutStackNavigation,
       navigationOptions: {
