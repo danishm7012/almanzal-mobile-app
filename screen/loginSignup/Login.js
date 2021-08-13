@@ -55,8 +55,8 @@ function Login(navData) {
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              placeholder="Email."
-              placeholderTextColor="#003f5c"
+              placeholder='Email.'
+              placeholderTextColor='#003f5c'
               onChangeText={(email) => setEmail(email)}
             />
           </View>
@@ -64,8 +64,8 @@ function Login(navData) {
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              placeholder="Password."
-              placeholderTextColor="#003f5c"
+              placeholder='Password.'
+              placeholderTextColor='#003f5c'
               secureTextEntry={true}
               onChangeText={(password) => setPassword(password)}
             />
@@ -106,12 +106,14 @@ function Login(navData) {
 
 Login.navigationOptions = (navData) => {
   return {
-    headerTitle: <Image source={require('../../assets/realestatelogo.png')} />,
+    headerTitle: () => (
+      <Image source={require('../../assets/realestatelogo.png')} />
+    ),
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Back Button"
-          iconName="arrow-back"
+          title='Back Button'
+          iconName='arrow-back'
           onPress={() => {
             navData.navigation.goBack()
           }}

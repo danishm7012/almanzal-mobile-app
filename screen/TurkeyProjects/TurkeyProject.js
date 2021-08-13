@@ -42,12 +42,14 @@ const TurkeyProject = (props) => {
 
 TurkeyProject.navigationOptions = (navigationData) => {
   return {
-    headerTitle: <Image source={require('../../assets/realestatelogo.png')} />,
+    headerTitle: () => (
+      <Image source={require('../../assets/realestatelogo.png')} />
+    ),
     headerRight: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="compdetail"
-          iconName="ios-add"
+          title='compdetail'
+          iconName='ios-add'
           onPress={() => {
             navigationData.navigation.navigate('Property_Form')
           }}
@@ -57,8 +59,8 @@ TurkeyProject.navigationOptions = (navigationData) => {
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Menu"
-          iconName="ios-menu"
+          title='Menu'
+          iconName='ios-menu'
           onPress={() => {
             navigationData.navigation.toggleDrawer()
           }}

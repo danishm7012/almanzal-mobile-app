@@ -48,12 +48,14 @@ const PropertyDetailSale = (props) => {
 
 PropertyDetailSale.navigationOptions = (navigationData) => {
   return {
-    headerTitle: <Image source={require('../../assets/realestatelogo.png')} />,
+    headerTitle: () => (
+      <Image source={require('../../assets/realestatelogo.png')} />
+    ),
     headerRight: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="compdetail"
-          iconName="ios-add"
+          title='compdetail'
+          iconName='ios-add'
           onPress={() => {
             navigationData.navigation.navigate('Property_Form')
           }}
@@ -63,8 +65,8 @@ PropertyDetailSale.navigationOptions = (navigationData) => {
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Back Button"
-          iconName="arrow-back"
+          title='Back Button'
+          iconName='arrow-back'
           onPress={() => {
             navigationData.navigation.goBack()
           }}

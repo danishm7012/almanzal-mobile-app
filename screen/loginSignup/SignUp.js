@@ -63,8 +63,8 @@ function SignUp(navData) {
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              placeholder="Name..."
-              placeholderTextColor="#003f5c"
+              placeholder='Name...'
+              placeholderTextColor='#003f5c'
               onChangeText={(email) => setName(email)}
             />
           </View>
@@ -72,8 +72,8 @@ function SignUp(navData) {
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              placeholder="Email..."
-              placeholderTextColor="#003f5c"
+              placeholder='Email...'
+              placeholderTextColor='#003f5c'
               secureTextEntry={true}
               onChangeText={(password) => setEmail(password)}
             />
@@ -81,8 +81,8 @@ function SignUp(navData) {
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              placeholder="Password..."
-              placeholderTextColor="#003f5c"
+              placeholder='Password...'
+              placeholderTextColor='#003f5c'
               secureTextEntry={true}
               onChangeText={(password) => setPassword(password)}
             />
@@ -90,8 +90,8 @@ function SignUp(navData) {
           <View style={styles.inputView}>
             <TextInput
               style={styles.TextInput}
-              placeholder="Confirm Password."
-              placeholderTextColor="#003f5c"
+              placeholder='Confirm Password.'
+              placeholderTextColor='#003f5c'
               secureTextEntry={true}
               onChangeText={(password) => setConfirmPassword(password)}
             />
@@ -114,12 +114,14 @@ function SignUp(navData) {
 }
 SignUp.navigationOptions = (navData) => {
   return {
-    headerTitle: <Image source={require('../../assets/realestatelogo.png')} />,
+    headerTitle: () => (
+      <Image source={require('../../assets/realestatelogo.png')} />
+    ),
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Back Button"
-          iconName="arrow-back"
+          title='Back Button'
+          iconName='arrow-back'
           onPress={() => {
             navData.navigation.goBack()
           }}

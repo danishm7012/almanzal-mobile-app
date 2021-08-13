@@ -59,6 +59,21 @@ const ContactUs = () => {
             style={AllStyle.contactUsImages}
           />
         </View>
+        <View
+          style={{
+            paddingTop: StatusBar.currentHeight * 2.5,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <SocialMediaIcon
+            facebookSocial='https://www.facebook.com/almanzaluae'
+            twitterSocial='https://twitter.com/ManzalAl'
+            linkedInSocial='https://www.linkedin.com/in/al-manzal-aa548a20a/'
+            instagramSocial='https://www.instagram.com/almanzal1/'
+            websiteSocial='https://almanzal.ae/'
+          />
+        </View>
         <View style={AllStyle.mainContactForm}>
           <View style={AllStyle.contactUsformMainHeading}>
             <Text style={AllStyle.contactUsformMainHeadingOuter}>
@@ -75,27 +90,27 @@ const ContactUs = () => {
             <View style={{ flex: 1 }}>
               <TextInput
                 style={AllStyle.TextinputfieldcontactUs}
-                placeholder="Name"
+                placeholder='Name'
                 onChangeText={(name) => setName(name)}
                 value={name}
-                placeholderTextColor="#0f385a"
+                placeholderTextColor='#0f385a'
               />
 
               {errors.name}
 
               <TextInput
                 style={AllStyle.TextinputfieldcontactUs}
-                placeholder="Email"
-                placeholderTextColor="#0f385a"
+                placeholder='Email'
+                placeholderTextColor='#0f385a'
                 onChangeText={(useremail) => setEmail(useremail)}
                 value={email}
-                textContentType="emailAddress"
+                textContentType='emailAddress'
               />
               {errors.email}
               <TextInput
                 style={AllStyle.TextinputfieldcontactUs}
-                placeholder="Subject"
-                placeholderTextColor="#0f385a"
+                placeholder='Subject'
+                placeholderTextColor='#0f385a'
                 onChangeText={(subject) => setSubject(subject)}
                 value={subject}
               />
@@ -103,36 +118,20 @@ const ContactUs = () => {
 
               <TextInput
                 style={AllStyle.TextinputfieldcontactUs}
-                placeholder="Leave your Message Here !"
-                placeholderTextColor="#0f385a"
+                placeholder='Leave your Message Here !'
+                placeholderTextColor='#0f385a'
                 multiline={true}
                 numberOfLines={2}
                 onChangeText={(usermessage) => setMessage(usermessage)}
                 value={message}
               />
+              <Button
+                style={{ paddingTop: 10 }}
+                title='Submit'
+                color='#0f385a'
+                onPress={submitHandler}
+              />
             </View>
-          </View>
-          <Button
-            style={{ paddingTop: StatusBar.currentHeight }}
-            title="Submit"
-            color="#0f385a"
-            onPress={submitHandler}
-          />
-
-          <View
-            style={{
-              paddingTop: StatusBar.currentHeight * 2.5,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <SocialMediaIcon
-              facebookSocial="https://www.facebook.com/almanzaluae"
-              twitterSocial="https://twitter.com/ManzalAl"
-              linkedInSocial="https://www.linkedin.com/in/al-manzal-aa548a20a/"
-              instagramSocial="https://www.instagram.com/almanzal1/"
-              websiteSocial="https://almanzal.ae/"
-            />
           </View>
         </View>
       </View>
@@ -142,12 +141,18 @@ const ContactUs = () => {
 
 ContactUs.navigationOptions = (navData) => {
   return {
-    headerTitle: 'ContactUs',
+    headerTitle: () => (
+      <Text
+        style={{ fontSize: 16, fontFamily: 'open-sans-bold', color: '#fff' }}
+      >
+        Contact Us
+      </Text>
+    ),
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Menu"
-          iconName="ios-menu"
+          title='Menu'
+          iconName='ios-menu'
           onPress={() => {
             navData.navigation.toggleDrawer()
           }}

@@ -431,12 +431,18 @@ const FAQ = (props) => {
 
 FAQ.navigationOptions = (navData) => {
   return {
-    headerTitle: 'FAQ',
+    headerTitle: () => (
+      <Text
+        style={{ fontSize: 16, fontFamily: 'open-sans-bold', color: '#fff' }}
+      >
+        FAQ
+      </Text>
+    ),
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Menu"
-          iconName="ios-menu"
+          title='Menu'
+          iconName='ios-menu'
           onPress={() => {
             navData.navigation.toggleDrawer()
           }}

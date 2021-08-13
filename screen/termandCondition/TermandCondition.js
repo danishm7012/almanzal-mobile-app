@@ -356,12 +356,18 @@ const TermandCondition = (props) => {
 
 TermandCondition.navigationOptions = (navData) => {
   return {
-    headerTitle: 'Term&Condition',
+    headerTitle: () => (
+      <Text
+        style={{ fontSize: 16, fontFamily: 'open-sans-bold', color: '#fff' }}
+      >
+        Term&Condition
+      </Text>
+    ),
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
-          title="Menu"
-          iconName="ios-menu"
+          title='Menu'
+          iconName='ios-menu'
           onPress={() => {
             navData.navigation.toggleDrawer()
           }}
